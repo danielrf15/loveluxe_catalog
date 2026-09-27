@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Love Luxe - Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="catalog.css">
+</head>
+
+<body>
+
+    <!-- MOBILE OVERLAY -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- SIDEBAR -->
+    <aside class="shop-sidebar" id="shopSidebar">
+
+        <div class="sidebar-brand">
+
+            <div>
+                <h1>LOVE LUXE</h1>
+                <p>BY EA • EST. 2024</p>
+            </div>
+
+            <button
+                class="close-sidebar"
+                onclick="closeSidebar()">
+                ×
+            </button>
+
+        </div>
+
+        <div class="sidebar-content">
+
+            <div class="sidebar-section-title">
+                SHOPPER
+            </div>
+
+            <a
+                href="catalog.html"
+                class="sidebar-link active">
+
+                <span class="sidebar-icon">🛍</span>
+                <span>Shop</span>
+
+            </a>
+
+            <a
+                href="#"
+                class="sidebar-link"
+                onclick="showMessage('My Orders')">
+
+                <span class="sidebar-icon">📦</span>
+                <span>My Orders</span>
+
+            </a>
+
+            <a
+                href="customer.html"
+                class="sidebar-link">
+
+                <span class="sidebar-icon">👤</span>
+                <span>My Account</span>
+
+            </a>
+
+
+            <div class="sidebar-section-title account-title">
+                ACCOUNT
+            </div>
+
+            <a
+                href="#"
+                class="sidebar-link"
+                onclick="showMessage('Settings')">
+
+                <span class="sidebar-icon">⚙</span>
+                <span>Settings</span>
+
+            </a>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <button
+                class="logout-button"
+                onclick="logout()">
+
+                <span class="sidebar-icon">↪</span>
+                <span>Log Out</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="shop-main" id="shopMain">
+
+        <!-- TOP BAR -->
+        <header class="shop-topbar">
+
+            <button
+                class="open-sidebar"
+                id="openSidebarButton"
+                onclick="openSidebar()">
+
+                ☰
+
+            </button>
+
+            <div class="topbar-title">
+
+                <span>SHOP</span>
+
+                <h2>Love Luxe Collection</h2>
+
+            </div>
+
+            <div class="topbar-user">
+
+                <span class="user-icon">👤</span>
+
+                <span id="customerName">
+                    Customer
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- HERO -->
+        <section class="catalog-hero">
+
+            <p class="hero-label">
+                LOVE LUXE COLLECTION
+            </p>
+
+            <h1>
+                Find Something You Love
+            </h1>
+
+            <p>
+                Explore our collection of clothing, bags,
+                perfume and body care products.
+            </p>
+
+        </section>
+
+
+        <!-- CATALOG -->
+        <section class="catalog-container">
+
+            <div class="catalog-top">
+
+                <div>
+
+                    <h2>
+                        Our Products
+                    </h2>
+
+                    <p id="productCount">
+                        Showing all products
+                    </p>
+
+                </div>
+
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search products...">
+
+                </div>
+
+            </div>
+
+
+            <!-- FILTERS -->
+            <div class="filter-section">
+
+                <button
+                    class="filter-button active"
+                    data-category="All">
+
+                    All Products
+
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="Clothing">
+
+                    Clothing
+
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="Body Care">
+
+                    Body Care
+
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="Bags">
+
+                    Bags
+
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="Perfume">
+
+                    Perfume
+
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCTS -->
+            <div
+                class="product-grid"
+                id="productGrid">
+
+            </div>
+
+
+            <!-- NO PRODUCTS -->
+            <div
+                class="no-products"
+                id="noProducts">
+
+                <h3>
+                    No products found
+                </h3>
+
+                <p>
+                    Try another search or category.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- EXISTING SCRIPT -->
+    <script src="script.js"></script>
+
+    <!-- CATALOG SCRIPT -->
+    <script src="catalog.js"></script>
+
+</body>
+
+</html>
